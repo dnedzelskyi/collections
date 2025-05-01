@@ -16,9 +16,6 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Data directory
-data/
-
 # Go build cache
 *.out
 
