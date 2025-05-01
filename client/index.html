@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script src="index.js" defer></script>
+  <title>Collections</title>
+</head>
+
+<body>
+  <header>
+    <h1>Collections</h1>
+    <search>
+      <input id="search" type="search" placeholder="Search ..." />
+    </search>
+  </header>
+  <main>
+    <section class="search-result-container">
+    </section>
+  </main>
+  <template id="card">
+    <article class="card-container" data-id data-created-at>
+      <h3 class="card-title" data-field="title"></h3>
+      <hr>
+      <pre class="card-content" data-field="content"></pre>
+      <button class="card-btn">Details</button>
+      <div class="card-details-popover" popover>
+        <section class="card-details-container">
+          <h3 class="card-title">Details</h3>
+          <pre data-field="details"></pre>
+          <button class="card-btn" onclick="this?.closest('.card-details-popover')?.hidePopover();">
+            Close
+          </button>
+        </section>
+      </div>
+    </article>
+  </template>
+</body>
+
+</html>

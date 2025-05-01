@@ -1,0 +1,27 @@
+# Binaries
+/server
+
+# Dependency directories
+/vendor/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+*.tmp
+
+# IDE/editor folders
+.vscode/
+.idea/
+
+# Data directory
+data/
+
+# Go build cache
+*.out
+
+# Client build artifacts
+client/dist/
+client/node_modules/
