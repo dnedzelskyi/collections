@@ -25,7 +25,7 @@ func main() {
 	mux.Handle("/", http.FileServer(http.Dir("./client")))
 	mux.HandleFunc("/api/data", apiDataHandler)
 
-	log.Printf("Server listening on : http://localhost:%d", Port)
+	log.Printf("Server listening on : http://[::1]:%d", Port)
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", Port), mux))
 }
 
