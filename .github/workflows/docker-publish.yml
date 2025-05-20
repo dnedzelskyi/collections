@@ -61,7 +61,7 @@ jobs:
       # Add Dockerfile validation step
       - name: Validate Dockerfile
         run: |
-          docker run --rm -i hadolint/hadolint < dockerfile
+          docker run --rm -i hadolint/hadolint --verbose < dockerfile
 
       # Build and push the Docker image to the container registry.
       - name: Build and push Docker image
