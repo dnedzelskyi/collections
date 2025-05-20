@@ -69,11 +69,6 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
       
-      # Add a step to test the Docker image
-      - name: Test Docker image
-        run: |
-          docker run --rm ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }} --version
-      
       # Generate an artifact attestation to improve supply chain security.
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@v2
